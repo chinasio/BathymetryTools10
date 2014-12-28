@@ -1,0 +1,48 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>BathymetryTools</Name>
+  <AddInID>{22ecbe30-864a-40e4-9016-149e8c24e68b}</AddInID>
+  <Description>BathymetryTools for ArcGIS 10</Description>
+  <Version>1.0</Version>
+  <Image>Images\BathymetryTools10.png</Image>
+  <Author>Eric O'Neal</Author>
+  <Company>Starlight GIS</Company>
+  <Date>2/24/2012</Date>
+  <Targets>
+    <Target name="Desktop" version="10.0" />
+  </Targets>
+  <AddIn language="CLR" library="BathymetryTools10.dll" namespace="BathymetryTools10">
+    <ArcMap>
+
+
+
+      <Menus>
+        <Menu isRootMenu="true" id="BathymetryTools" caption="Bathymetry Tools">
+          <Items>
+            <Button refID="Starlight_GIS_BathymetryTools10_extBathymetryTools_btnAreaVolume"/>
+            <Button refID="Starlight_GIS_BathymetryTools10_extBathymetryTools_btnPingSampler"/>
+            <Button refID="Starlight_GIS_BathymetryTools10_extBathymetryTools_btnShallowInterpolation"/>
+            <Button refID="Starlight_GIS_BathymetryTools10_extBathymetryTools_btnDeepInterpolation"/>
+            <Button refID="Starlight_GIS_BathymetryTools10_extBathymetryTools_btnAutoInterpolate"/>
+            <Button refID="Starlight_GIS_BathymetryTools10_extBathymetryTools_btnRasterInterpolate"/>
+          </Items>
+        </Menu>
+      </Menus>
+
+      <Commands>
+        <Button id="Starlight_GIS_BathymetryTools10_extBathymetryTools_btnAreaVolume" class="btnAreaVolume" message="Calculates area and volume of an elevation raster at set intervals." caption="Area and Volume" tip="Area and Volume" category="BathymetryTools" image="Images\cmdAreaAndVolume.png" />
+        <Button id="Starlight_GIS_BathymetryTools10_extBathymetryTools_btnPingSampler" class="btnPingSampler" message="Calculates elevation data for a sample point from surrounding data points" caption="Ping Sample" tip="Ping Sample" category="BathymetryTools" image="Images\cmdPingSampler.png" />
+        <Button id="Starlight_GIS_BathymetryTools10_extBathymetryTools_btnShallowInterpolation" class="btnShallowInterpolation" message="Calculates depth points from sounding points to shoreline along a user-defined line" caption="Shallow Interpolation" tip="Shallow Interpolation" category="BathymetryTools" image="Images\cmdShallowInterpolation.png" />
+        <Button id="Starlight_GIS_BathymetryTools10_extBathymetryTools_btnDeepInterpolation" class="btnDeepInterpolation" message="Calculate depth points on along lines in a featureclass from nearby depth soundings" caption="Deep Interpolation" tip="Deep Interpolation" category="BathymetryTools" image="Images\cmdDeepInterpolation.png" />
+        <Button id="Starlight_GIS_BathymetryTools10_extBathymetryTools_btnAutoInterpolate" class="btnAutoInterpolate" message="Calculates elevation data between a selected segment of shoreline and the closest elevation points" caption="Auto Interpolation" tip="Auto Interpolation" category="BathymetryTools" image="Images\cmdAutoInterpolate.png" />
+        <Button id="Starlight_GIS_BathymetryTools10_extBathymetryTools_btnRasterInterpolate" class="btnRasterInterpolate" message="text here" caption="Raster Interpolation" tip="Raster Interpolation" category="BathymetryTools" image="Images\grid.png" />
+      </Commands>
+      
+      
+      <Extensions>
+        <Extension id="Starlight_GIS_BathymetryTools10_extBathymetryTools" class="extBathymetryTools" productName="Bathymetry Tools" showInExtensionDialog="true" autoLoad="true">
+          <Description>Bathymetry Toolset for ArcGIS 10</Description>
+        </Extension>
+      </Extensions>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
